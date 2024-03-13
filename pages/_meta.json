@@ -17,5 +17,21 @@
     "theme": {
       "typesetting": "article"
     }
+  },
+  "EnglishSite": {
+    "title": "英文官网 ↗",
+    "href": "https://nextjs.org/",
+    "newWindow": true
+  },
+  "Github": {
+    "title": "Github ↗",
+    "href": "https://github.com/weijunext/NextjsTranslate",
+    "newWindow": true
+  },
+  "link1": {
+    "title": "赞助 ↗",
+    "type": "page",
+    "href": "https://www.buymeacoffee.com/",
+    "newWindow": true
   }
 }
