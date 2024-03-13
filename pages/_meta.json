@@ -1,25 +1,21 @@
 {
-  "index": "开始使用",
-  "installation": "安装",
-  "project-structure": "项目结构",
-  "---": {
-    "type": "separator"
-  },
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "关于",
-    "type": "page"
-  },
-  "EnglishSite": {
-    "title": "英文官网 ↗",
-    "href": "https://nextjs.org/",
-    "newWindow": true
-  },
-  "link2": {
-    "title": "赞助 ↗",
+  "index": {
     "type": "page",
-    "href": "https://www.buymeacoffee.com/",
-    "newWindow": true
+    "title": "React Cosmos",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "中文文档"
+  },
+  "about": {
+    "type": "page",
+    "title": "关于",
+    "theme": {
+      "typesetting": "article"
+    }
   }
 }

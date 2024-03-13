@@ -38,10 +38,10 @@ const baseSiteConfig = {
     { url: 'https://weijunext.com/', name: 'J实验室' },
     { url: 'https://githubbio.com', name: 'Github Bio Generator' },
     { url: 'https://smartexcel.cc/', name: 'Smart Excel' },
-    { url: SITE_URL, name: 'Next.js Translate' },
     { url: 'https://starter.weijunext.com/', name: 'Next.js Starter' },
     { url: 'https://nextjs.weijunext.com/', name: 'Next.js Practice' },
     { url: 'https://github.com/weijunext/indie-hacker-tools', name: 'Indie Hacker Tools' },
+    { url: SITE_URL, name: 'Next.js 中文文档' },
   ]
 }
 
