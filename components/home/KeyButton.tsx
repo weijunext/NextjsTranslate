@@ -5,7 +5,7 @@ const KeyButton = () => {
   return (
     <div className="flex space-x-4 w-full justify-center">
       <Link
-        href="/docs"
+        href="/docs/getting-started"
         className="border bg-black text-white py-4 px-6 rounded-md select-none"
       >
         开始学习 <span>→</span>
