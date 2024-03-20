@@ -1,11 +1,8 @@
 {
   "index": {
     "type": "page",
-    "title": "React Cosmos",
-    "display": "hidden",
-    "theme": {
-      "layout": "raw"
-    }
+    "title": "Next.js Translate",
+    "display": "hidden"
   },
   "docs": {
     "type": "page",

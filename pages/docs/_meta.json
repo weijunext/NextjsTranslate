@@ -1,4 +1,8 @@
 {
-  "getting-started": "开始使用",
-  "app": "APP 路由模式"
+  "-- Using app router": {
+    "type": "separator",
+    "title": "App Router 文档",
+    "href": "/pages"
+  },
+  "getting-started": "开始使用"
 }
