@@ -1,5 +1,5 @@
+import CTAButton from "@/components/home/CTAButton";
 import Feature from "@/components/home/Feature";
-import KeyButton from "@/components/home/KeyButton";
 import { useData } from "nextra/data";
 import Introduction from "./Introduction";
 
@@ -13,7 +13,7 @@ export function Homepage() {
     <main>
       <Introduction />
       <Feature />
-      <KeyButton />
+      <CTAButton />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import KeyButton from "@/components/home/KeyButton";
+import CTAButton from "@/components/home/CTAButton";
 import { siteConfig } from "@/config/site";
 
 const Introduction = () => {
@@ -10,7 +10,7 @@ const Introduction = () => {
       <p className="leading-normal text-muted-foreground sm:text-xl sm:leading-8">
         {siteConfig.description}
       </p>
-      <KeyButton />
+      <CTAButton />
     </section>
   );
 };

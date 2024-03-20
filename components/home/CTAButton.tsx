@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
-const KeyButton = () => {
+const CTAButton = () => {
   return (
     <div className="flex space-x-4 w-full justify-center">
       <Link
@@ -12,7 +12,7 @@ const KeyButton = () => {
       </Link>
       <Link
         href={siteConfig.authors[0].twitter as string}
-        className="border bg-white py-4 px-6 rounded-md select-none"
+        className="border py-4 px-6 rounded-md select-none"
         rel="noopener noreferrer nofollow"
       >
         关注推特 <span>↗</span>
@@ -21,4 +21,4 @@ const KeyButton = () => {
   );
 };
 
-export default KeyButton;
+export default CTAButton;
