@@ -26,22 +26,21 @@ npx create-next-app@latest
 在安装过程中，你会看到以下提示：
 
 ```txt filename="Terminal"
-你的项目命名为什么？my-app
-你想使用 TypeScript 吗？不 / 是
-你想使用 ESLint 吗？不 / 是
-你想使用 Tailwind CSS 吗？不 / 是
-你想使用 `src/` 目录吗？不 / 是
-你想使用应用路由器吗？(推荐) 不 / 是
-你想自定义默认导入别名 (@/*) 吗？不 / 是
-你想配置哪个导入别名？@/*
+What is your project named? my-app
+Would you like to use TypeScript? No / Yes
+Would you like to use ESLint? No / Yes
+Would you like to use Tailwind CSS? No / Yes
+Would you like to use `src/` directory? No / Yes
+Would you like to use App Router? (recommended) No / Yes
+Would you like to customize the default import alias (@/*)? No / Yes
+What import alias would you like configured? @/*
 ```
 
 在提示之后，`create-next-app` 将会创建一个带有你的项目名称的文件夹，并安装所需的依赖。
 
 如果你是 Next.js 的新手，请查看 [项目结构](/docs/getting-started/project-structure) 文档，了解你的应用中所有可能的文件和文件夹。
 
-> **值得了解**：
->
+> **Good to know**：
 > - Next.js 现在默认提供 [TypeScript](/docs/app/building-your-application/configuring/typescript)、[ESLint](/docs/app/building-your-application/configuring/eslint) 和 [Tailwind CSS](/docs/app/building-your-application/styling/tailwind-css) 配置。
 > - 你可以选择在项目根目录下使用 [`src` 目录](/docs/app/building-your-application/configuring/src-directory)，将应用的代码与配置文件分开。
 
@@ -79,19 +78,20 @@ Next.js 使用文件系统路由，这意味着你的应用中的路由由你如
 
 #### `app` 目录
 
-对于新应用，我们推荐使用 [应用路由器](/docs/app)。这个路由器允许你使用 React 的最新功能，并且是基于社区反馈对 [页面路由器](/docs/pages) 的进化。
+对于新应用，我们推荐使用 [App Router](/docs/app)。这个路由器允许你使用 React 的最新功能，并且是基于社区反馈对 [Pages Router](/docs/pages) 的进化。
 
 创建一个 `app/` 文件夹，然后添加一个 `layout.tsx` 和 `page.tsx` 文件。当用户访问你的应用的根目录 (`/`) 时，这些文件将被渲染。
 
 <Image
-  alt="应用文件夹结构"
-  srclight="/docs/light/app-getting-started.png"
-  srcdark="/docs/dark/app-getting-started.png"
+  alt="App Router 文件夹结构"
+  src="https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fapp-getting-started.png&w=3840&q=75&dpl=dpl_8iFhYcsMR1yZCSy8P48EVBnnKv9e"
+  srclight="https://nextjs.org/_next/image?url=%2Fdocs%2Flight%2Fapp-getting-started.png&w=3840&q=75&dpl=dpl_8iFhYcsMR1yZCSy8P48EVBnnKv9e"
+  srcdark="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fapp-getting-started.png&w=3840&q=75&dpl=dpl_8iFhYcsMR1yZCSy8P48EVBnnKv9e"
   width="1600"
   height="363"
 />
 
-在 `app/layout.tsx` 内创建一个 [根布局](/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required)，包含必需的 `<html>` 和 `<body>` 标签：
+在 `app/layout.tsx` 内创建一个 [根布局（layout）](/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required)，包含必需的 `<html>` 和 `<body>` 标签：
 
 ```tsx filename="app/layout.tsx" switcher
 export default function RootLayout({
@@ -131,13 +131,13 @@ export default function Page() {
 }
 ```
 
-> **值得了解**：如果你忘记创建 `layout.tsx`，当运行开发服务器 `next dev` 时，Next.js 会自动创建这个文件。
+> **Good to know**：如果你忘记创建 `layout.tsx`，当运行开发服务器 `next dev` 时，Next.js 会自动创建这个文件。
 
-了解更多关于 [使用应用路由器](/docs/app/building-your-application/routing/defining-routes)。
+了解更多关于 [App Router 的用法](/docs/app/building-your-application/routing/defining-routes)。
 
 #### `pages` 目录（可选）
 
-如果你更愿意使用页面路由器而不是应用路由器，你可以在项目的根目录创建一个 `pages/` 目录。
+如果你更愿意使用Pages Router而不是App Router，你可以在项目的根目录创建一个 `pages/` 目录。
 
 然后，在你的 `pages` 文件夹内添加一个 `index.tsx` 文件。这将是你的首页（`/`）：
 
@@ -147,11 +147,9 @@ export default function Page() {
 }
 ```
 
-接下来，在 `pages/` 内添加一个 `_app.tsx` 文件来定义全局布局。了解更多关于 [自定义 App 文件](/docs/pages/building-your-application/routing/custom-app)。
+接下来，在 `pages/` 内添加一个 `_app.tsx` 文件来定义全局布局。了解更多关于 [自定义 _app 文件](/docs/pages/building-your-application/routing/custom-app)。
 
-```tsx filename="
-
-pages/_app.tsx" switcher
+```tsx filename="pages/_app.tsx" switcher
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -167,9 +165,9 @@ export default function App({ Component, pageProps }) {
 
 最后，在 `pages/` 内添加一个 `_document.tsx` 文件来控制来自服务器的初始响应。了解更多关于 [自定义 Document 文件](/docs/pages/building-your-application/routing/custom-document)。
 
-了解更多关于 [使用页面路由器](/docs/pages/building-your-application/routing/pages-and-layouts)。
+了解更多关于 [使用Pages Router](/docs/pages/building-your-application/routing/pages-and-layouts)。
 
-> **值得了解**：虽然你可以在同一个项目中使用两种路由器，但 `app` 中的路由会优先于 `pages`。我们推荐在你的新项目中只使用一种路由器，以避免混淆。
+> **Good to know**：虽然你可以在同一个项目中使用两种路由器，但 `app` 中的路由会优先于 `pages`。我们推荐在你的新项目中只使用一种路由器，以避免混淆。
 
 #### `public` 文件夹（可选）
 
